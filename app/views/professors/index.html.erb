@@ -1,5 +1,12 @@
 <h1>Listing Professors</h1>
 
+<%= form_tag professors_path, :method => 'get' do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
+
 <table>
   <tr>
     <th>Name</th>
@@ -23,13 +30,5 @@
 </table>
 
 <br />
-
-<%= form_tag professors_path, :method => 'get' do %>
-  <p>
-    <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
-  </p>
-<% end %>
-
 
 <%= link_to 'New Professor', new_professor_path %>
