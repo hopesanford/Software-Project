@@ -2,7 +2,7 @@ class ProfessorsController < ApplicationController
   # GET /professors
   # GET /professors.json
   def index
-    @professors = Professor.all
+    @professors = Professor.search(params[:search])
 
     respond_to do |format|
       format.html # index.html.erb
