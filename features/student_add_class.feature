@@ -1,0 +1,9 @@
+Feature: 
+  As a prof/Ta, 
+  In order to can let students know when my office hours are, 
+  I want to be able to add classes I teach and when my office hours are for those classes are.
+
+
+  
+Scenario: restrict to Name
+  Then I should see Name
